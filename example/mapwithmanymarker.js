@@ -32,8 +32,8 @@ export default class App extends React.Component{
             latitude: 3.130791,
             longitude: 101.682306,
           }}
-          title="Fuck You!!"
-          description="Testing!"
+          title="Aisyah!!"
+          description="Tong Sampah ni dh penuh... tlg amik saya please :3 #dhpenuhtongsampah!"
         />
 
 
