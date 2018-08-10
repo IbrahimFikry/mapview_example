@@ -4,7 +4,10 @@ import { MapView, Constants } from 'expo';
 import { createStackNavigator } from 'react-navigation';
 
 
+
+
 import JustMap from './example/justmap.js';
+import MapwithMarker from './example/mapwithmarker.js';
 
 class App extends React.Component {
   render() {
@@ -17,9 +20,9 @@ class App extends React.Component {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={ () => this.props.navigation.navigate("MarkerMap1")}>
           <View style={styles.button}>
-          <Text>Map with Marker</Text>
+          <Text>Map with 1 Marker</Text>
           </View>
         </TouchableOpacity>
 
@@ -40,12 +43,8 @@ export default createStackNavigator(
   {
     Home: {screen: App,},
     JustMap: {screen: JustMap,},
+    MarkerMap1: {screen: MapwithMarker,},
   },
-  {
-    navigationOptions: {
-      headerMode:none,
-    }
-  }
 )
 
 //export default JustMap;
