@@ -19,6 +19,9 @@ export default class App extends React.Component{
   }
 
   render() {
+    //Do a loop function to generate multiple marker on the Mapview
+    const x = [];
+
     return (
       <MapView
         style={{ flex: 1 }}
@@ -29,18 +32,11 @@ export default class App extends React.Component{
             latitude: 3.130791,
             longitude: 101.682306,
           }}
-          title="This is me!"
+          title="Fuck You!!"
           description="Testing!"
         />
 
-        <Marker
-          coordinate={{
-            latitude: 3.15,
-            longitude: 101.682306,
-          }}
-          title="This is me2!"
-          description="Testing 2!"
-        />
+
 
       </MapView>
     )

@@ -8,6 +8,7 @@ import { createStackNavigator } from 'react-navigation';
 
 import JustMap from './example/justmap.js';
 import MapwithMarker from './example/mapwithmarker.js';
+import MapwithManyMarker from './example/mapwithmanymarker.js';
 
 class App extends React.Component {
   render() {
@@ -26,9 +27,9 @@ class App extends React.Component {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={ () => this.props.navigation.navigate("MarkerMany")}>
           <View style={styles.button}>
-          <Text>Just Map</Text>
+          <Text>Map with Multiple Marker</Text>
           </View>
         </TouchableOpacity>
 
@@ -44,6 +45,7 @@ export default createStackNavigator(
     Home: {screen: App,},
     JustMap: {screen: JustMap,},
     MarkerMap1: {screen: MapwithMarker,},
+    MarkerMany: {screen: MapwithManyMarker,},
   },
 )
 
