@@ -11,6 +11,7 @@ import MapwithMarker from './example/mapwithmarker.js';
 import MapwithManyMarker from './example/mapwithmanymarker.js';
 import Mapwithcustomimage from './example/mapwithcustomimage.js';
 import MapwithLocation from './example/mapwithcurrentlocation.js';
+import MapwithSearchBar from './example/mapwithasearchbarontop.js';
 
 class App extends React.Component {
   render() {
@@ -47,6 +48,12 @@ class App extends React.Component {
           </View>
         </TouchableOpacity>
 
+        <TouchableOpacity onPress={ () => this.props.navigation.navigate("MapSearchBar")}>
+          <View style={styles.button}>
+          <Text>Map with SearchBar</Text>
+          </View>
+        </TouchableOpacity>
+
 
 
       </ScrollView>
@@ -64,6 +71,7 @@ export default createStackNavigator(
     MarkerMany: {screen: MapwithManyMarker,},
     MapCustom: {screen : Mapwithcustomimage,},
     MapLocation: {screen : MapwithLocation,},
+    MapSearchBar: {screen : MapwithSearchBar,},
   },
 )
 

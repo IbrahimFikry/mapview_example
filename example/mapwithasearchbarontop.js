@@ -1,8 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { MapView } from 'expo';
+import { StyleSheet, Text, View, TouchableOpacity, ScrollView, Button, Alert, TextInput, Dimensions } from 'react-native';
+import { MapView, Constants } from 'expo';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 import { Marker } from 'react-native-maps';
+
+const CONST_WIDTH = Dimensions.get('window').width;
+const searchbarwidth = CONST_WIDTH - 16 - 16;
 
 export default class App extends React.Component{
   constructor(props) {
@@ -17,6 +21,18 @@ export default class App extends React.Component{
       }
     }
   }
+  //
+  // <View style={styles.inside}>
+  //
+  //   <View style={styles.row}>
+  //       <Text>Hello</Text>
+  //
+  //       <Text>Ibrahim</Text>
+  //
+  //   </View>
+  //
+  // </View>
+
 
   render() {
     //Do a loop function to generate multiple marker on the Mapview
@@ -26,6 +42,13 @@ export default class App extends React.Component{
       <MapView
         style={{ flex: 1 }}
         initialRegion={this.state.region}>
+
+        <View style={styles.searchbar}>
+      
+
+            <Text>Search</Text>
+
+        </View>
         <Marker
           coordinate={{
             latitude: 3.130791,
@@ -43,3 +66,18 @@ export default class App extends React.Component{
     )
   }
 }
+
+const styles = StyleSheet.create({
+  searchbar: {
+    //flexDirection:'row',
+    backgroundColor: 'grey' ,
+    width:searchbarwidth,
+    marginTop:16,
+    marginBottom:16,
+    marginLeft:16,
+    marginRight:16,
+  },
+  searchbar2: {
+    alignItems:'center'
+  },
+});
