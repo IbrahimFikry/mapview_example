@@ -7,8 +7,10 @@ import { createStackNavigator } from 'react-navigation';
 
 
 import JustMap from './example/justmap.js';
-import MapwithMarker from './example/mapwithmarker.js';
-import MapwithManyMarker from './example/mapwithmanymarker.js';
+import MapwithMarker from './example/mapwithMarker.js';
+import MapwithManyMarker from './example/mapwithManyMarker.js';
+import Mapwithcustomimage from './example/mapwithcustomimage.js';
+import MapwithLocation from './example/mapwithcurrentlocation.js';
 
 class App extends React.Component {
   render() {
@@ -33,6 +35,20 @@ class App extends React.Component {
           </View>
         </TouchableOpacity>
 
+        <TouchableOpacity onPress={ () => this.props.navigation.navigate("MapCustom")}>
+          <View style={styles.button}>
+          <Text>Map with Custom Image Marker</Text>
+          </View>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={ () => this.props.navigation.navigate("MapLocation")}>
+          <View style={styles.button}>
+          <Text>Map with Current Location</Text>
+          </View>
+        </TouchableOpacity>
+
+
+
       </ScrollView>
 
 
@@ -46,6 +62,8 @@ export default createStackNavigator(
     JustMap: {screen: JustMap,},
     MarkerMap1: {screen: MapwithMarker,},
     MarkerMany: {screen: MapwithManyMarker,},
+    MapCustom: {screen : Mapwithcustomimage,},
+    MapLocation: {screen : MapwithLocation,},
   },
 )
 
