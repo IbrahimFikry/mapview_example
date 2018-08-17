@@ -7,8 +7,8 @@ import { createStackNavigator } from 'react-navigation';
 
 
 import JustMap from './example/justmap.js';
-import MapwithMarker from './example/mapwithMarker.js';
-import MapwithManyMarker from './example/mapwithManyMarker.js';
+import MapwithMarker from './example/mapwithmarker.js';
+import MapwithManyMarker from './example/mapwithmanymarker.js';
 import Mapwithcustomimage from './example/mapwithcustomimage.js';
 import MapwithLocation from './example/mapwithcurrentlocation.js';
 
